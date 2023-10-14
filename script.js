@@ -18,6 +18,7 @@ function backspace() {
 }
 
 function calculateResult() {
+  console.log(displayValue)
   try {
     displayValue = eval(displayValue);
     document.getElementById('display').value = displayValue;
