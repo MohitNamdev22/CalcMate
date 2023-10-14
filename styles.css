@@ -1,62 +1,74 @@
 body {
-    background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-  
-  .container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    color: white;
-  }
-  
-  .calculator {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  
-  .screen {
-    padding: 10px;
-    text-align: right;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  input {
-    width: 100%;
-    height: 40px;
-    font-size: 1.5em;
-    border: none;
-    outline: none;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1px;
-  }
-  
-  button {
-    border: none;
-    outline: none;
-    padding: 15px;
-    font-size: 1.2em;
-    background-color: #ddd;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ccc;
-  }
-  
+  background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+input {
+  width: 100%;
+  height: 40px;
+  font-size: 1.5em;
+  margin-bottom: 2rem;
+  border: none;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px 5px;
+  font-size: 1.2em;
+  background-color: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+/* Added Some Styling */
+.operator{
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.operator:hover{
+  background-color: #5b5b5b;
+}
+
+.fa-delete-left{
+  font-size: 1.3em;
+}
