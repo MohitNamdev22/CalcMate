@@ -10,6 +10,13 @@ function clearDisplay() {
   document.getElementById('display').value = displayValue;
 }
 
+//Added Backspace Functionality
+
+function backspace() {
+  displayValue = displayValue.slice(0, -1);
+  document.getElementById('display').value = displayValue;
+}
+
 function calculateResult() {
   try {
     displayValue = eval(displayValue);
