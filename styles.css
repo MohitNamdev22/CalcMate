@@ -1,11 +1,11 @@
 body {
-  background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
+  background: radial-gradient(circle, #08c4d1, #181069, #000000);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
