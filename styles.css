@@ -1,19 +1,30 @@
+:root{
+  --bodybg: #576CA8;
+  --calcbg: #2b4990;
+  --calc: #576da874;
+  --operators: #302B27;
+  --fontcolor: #F5F3F5;
+}
+
 body {
-  background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
+  background: var(--bodybg);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: all 0.5s ease;
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--calcbg);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  box-shadow: 5px 10px 20px #0d0d0d;
 }
 
 h1 {
@@ -21,12 +32,12 @@ h1 {
 }
 
 .calculator {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--calc);
   border-radius: 10px;
   padding: 20px;
+  width: auto;
+  /* width: 80vw; */
 }
-
-
 
 input {
   width: 100%;
@@ -39,7 +50,28 @@ input {
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);    /* on more 4 => 8 */
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.numbers{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.functions{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+.more{ 
+  display: none;   
+  /* display: grid; */
+  grid-template-columns: repeat(2, 1fr);   
+  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 15px;
 }
@@ -50,7 +82,7 @@ button {
   outline: none;
   padding: 20px 5px;
   font-size: 1.2em;
-  background-color: #ddd;
+  background-color: var(--fontcolor);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -61,14 +93,44 @@ button:hover {
 
 /* Added Some Styling */
 .operator{
-  background-color: #2f2f2f;
-  color: #fff;
+  background-color: var(--operators);
+  color: var(--fontcolor);
 }
 
 .operator:hover{
   background-color: #5b5b5b;
 }
 
+.delete{
+  background-color: #000;
+  color: var(--fontcolor);
+}
+
+.result{
+  background-color: #000;
+  color: var(--fontcolor);
+}
+
 .fa-delete-left{
   font-size: 1.3em;
+}
+
+.fa-flask{
+  font-size: 1.5rem;
+  color: var(--fontcolor);
+}
+
+.scientific{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: #000;
+  color: var(--fontcolor);
+  z-index: 9;
+}
+.scientific:hover{
+  background-color: #2f2f2f;
 }

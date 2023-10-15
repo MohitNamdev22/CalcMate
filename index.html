@@ -1,40 +1,64 @@
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
+    <button class="scientific" onclick="toggleScientificMode()"><i class="fa-solid fa-flask" id="icon"></i></button>
     <div class="container">
       <h1>CalcMate - Your Open-Source Calculator</h1>
-      <p>It is the most efficient calculator</p>
-      <div class="calculator">
+      <p style="color: var(--fontcolor);">It is the most efficient calculator</p>
+      <div class="calculator" id="calculator">
         <div class="screen">
-          <input type="text" id="display"  disabled>
+          <input type="text" id="display" disabled />
         </div>
-      <div class="buttons">
-        <button onclick="clearDisplay()" class="operator">C</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="appendToDisplay(9)">9</button>
-        <button onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
-        <button onclick="appendToDisplay('/')" class="operator">/</button>
-        <button onclick="appendToDisplay(8)">8</button>
-        <button onclick="appendToDisplay(7)">7</button>
-        <button onclick="appendToDisplay(6)">6</button>
-        <button onclick="appendToDisplay('*')" class="operator">*</button>
-        <button onclick="appendToDisplay(5)">5</button>
-        <button onclick="appendToDisplay(4)">4</button>
-        <button onclick="appendToDisplay(3)">3</button>
-        <button onclick="appendToDisplay('-')" class="operator">-</button>
-        <button onclick="appendToDisplay(2)">2</button>
-        <button onclick="appendToDisplay(1)">1</button>
-        <button onclick="appendToDisplay(0)">0</button>
-        <button onclick="appendToDisplay('%')" class="operator">%</button>
-        <button onclick="appendToDisplay('+')" class="operator">+</button>
-        <button onclick="appendToDisplay('**')" class="operator">^</button>  <!--Added Power Operator--> 
-        <button onclick="calculateResult()" class="operator">=</button>
-        
+        <div class="buttons" id="buttons">
+          <div class="numbers">
+            <button onclick="appendToDisplay(9)">9</button>
+            <button onclick="appendToDisplay(8)">8</button>
+            <button onclick="appendToDisplay(7)">7</button>
+            <button onclick="appendToDisplay(6)">6</button>
+            <button onclick="appendToDisplay(5)">5</button>
+            <button onclick="appendToDisplay(4)">4</button>
+            <button onclick="appendToDisplay(3)">3</button>
+            <button onclick="appendToDisplay(2)">2</button>
+            <button onclick="appendToDisplay(1)">1</button>
+            <button onclick="appendToDisplay(0)">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+          </div>
+          <div class="functions">
+            <button onclick="backspace()" class="operator delete">
+              <i class="fa-solid fa-delete-left" id="icon"></i>
+            </button>
+            <button onclick="calculateResult()" class="operator result">=</button>
+            <button onclick="clearDisplay()" class="operator">C</button>
+            <button onclick="appendToDisplay('/')" class="operator">/</button>
+            <button onclick="appendToDisplay('*')" class="operator">*</button>
+            <button onclick="appendToDisplay('-')" class="operator">-</button>
+            <button onclick="appendToDisplay('%')" class="operator">%</button>
+            <button onclick="appendToDisplay('+')" class="operator">+</button>
+            <button onclick="appendToDisplay('**')" class="operator">^</button>
+            <!--Added Power Operator-->
+            <button class="operator" onclick="factorial()">!</button>
+          </div>
+
+          <div class="more" id="more">                     <!-- on more -->
+            <button class="operator" onclick="log()">log</button>
+            <button class="operator" onclick="log2()">log2</button>
+            <button class="operator" onclick="log10()">log10</button>
+            <button class="operator" onclick="sin()">Sin</button>
+            <button class="operator" onclick="cos()">Cos</button>
+            <button class="operator" onclick="tan()">Tan</button>
+            <button class="operator" onclick="squareRoot()"><i class="fa-solid fa-square-root-variable"></i></button>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
     <script src="script.js"></script>
   </body>
