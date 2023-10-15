@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
+  background:#cacccc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background: #a0b8ba;
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
@@ -61,8 +61,8 @@ button:hover {
 
 /* Added Some Styling */
 .operator{
-  background-color: #2f2f2f;
-  color: #fff;
+  background-color:#858b8c;
+  color: #141414;
 }
 
 .operator:hover{
@@ -71,4 +71,13 @@ button:hover {
 
 .fa-delete-left{
   font-size: 1.3em;
+}
+
+#equal{
+  background-color: #186170;
+  color: #ddd;
+}
+
+#equal:hover{
+  background-color: #c4cbcc;
 }
