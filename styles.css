@@ -1,5 +1,13 @@
+:root{
+  --bodybg: #576CA8;
+  --calcbg: #2b4990;
+  --calc: #576da874;
+  --operators: #302B27;
+  --fontcolor: #F5F3F5;
+}
+
 body {
-  background: linear-gradient(to bottom right, #4a69bb, #6a98e7);
+  background: var(--bodybg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +19,12 @@ body {
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--calcbg);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 20px;
   text-align: center;
+  box-shadow: 5px 10px 20px #0d0d0d;
 }
 
 h1 {
@@ -23,7 +32,7 @@ h1 {
 }
 
 .calculator {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--calc);
   border-radius: 10px;
   padding: 20px;
   width: auto;
@@ -73,7 +82,7 @@ button {
   outline: none;
   padding: 20px 5px;
   font-size: 1.2em;
-  background-color: #ddd;
+  background-color: var(--fontcolor);
   cursor: pointer;
   border-radius: 5px;
 }
@@ -84,8 +93,8 @@ button:hover {
 
 /* Added Some Styling */
 .operator{
-  background-color: #2f2f2f;
-  color: #fff;
+  background-color: var(--operators);
+  color: var(--fontcolor);
 }
 
 .operator:hover{
@@ -94,12 +103,12 @@ button:hover {
 
 .delete{
   background-color: #000;
-  color: #fff;
+  color: var(--fontcolor);
 }
 
 .result{
   background-color: #000;
-  color: #fff;
+  color: var(--fontcolor);
 }
 
 .fa-delete-left{
@@ -108,7 +117,7 @@ button:hover {
 
 .fa-flask{
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--fontcolor);
 }
 
 .scientific{
@@ -119,7 +128,7 @@ button:hover {
   top: 40px;
   right: 40px;
   background-color: #000;
-  color: #fff;
+  color: var(--fontcolor);
   z-index: 9;
 }
 .scientific:hover{
