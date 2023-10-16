@@ -11,26 +11,31 @@
         <div class="screen">
           <input type="text" id="display"  disabled>
         </div>
-      <div class="buttons">
-        <button onclick="clearDisplay()" class="operator">C</button>
-        <button onclick="appendToDisplay('.')">.</button>
-        <button onclick="appendToDisplay(9)">9</button>
-        <button onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
-        <button onclick="appendToDisplay('/')" class="operator">/</button>
-        <button onclick="appendToDisplay(8)">8</button>
-        <button onclick="appendToDisplay(7)">7</button>
-        <button onclick="appendToDisplay(6)">6</button>
-        <button onclick="appendToDisplay('*')" class="operator">*</button>
-        <button onclick="appendToDisplay(5)">5</button>
-        <button onclick="appendToDisplay(4)">4</button>
-        <button onclick="appendToDisplay(3)">3</button>
-        <button onclick="appendToDisplay('-')" class="operator">-</button>
-        <button onclick="appendToDisplay(2)">2</button>
-        <button onclick="appendToDisplay(1)">1</button>
-        <button onclick="appendToDisplay(0)">0</button>
-        <button onclick="appendToDisplay('%')" class="operator">%</button>
-        <button onclick="appendToDisplay('+')" class="operator">+</button>
+       <div>
+        <button onclick="clearDisplay()" style="color: red;" class="operator">C</button> <!--Color of C changed to RED-->
+      </div>
+      <hr>
+      <div class="buttons"> 
+       
+        <button onclick="backspace()" style="background-color: #2f2f2f;"><i class="fa-solid fa-delete-left" style="color: beige;"></i></button>
         <button onclick="appendToDisplay('**')" class="operator">^</button>  <!--Added Power Operator--> 
+        <button onclick="appendToDisplay('%')" class="operator">%</button>
+        <button onclick="appendToDisplay('/')" class="operator">/</button>
+        <button onclick="appendToDisplay(7)">7</button>
+        <button onclick="appendToDisplay(8)">8</button>
+        <button onclick="appendToDisplay(9)">9</button>
+        <button onclick="appendToDisplay('*')" class="operator">&times;</button> <!--Will display X intead of *-->
+        <button onclick="appendToDisplay(4)">4</button>
+        <button onclick="appendToDisplay(5)">5</button>
+        <button onclick="appendToDisplay(6)">6</button>
+        <button onclick="appendToDisplay('-')" class="operator">-</button>
+        <button onclick="appendToDisplay(1)">1</button>
+        <button onclick="appendToDisplay(2)">2</button>
+        <button onclick="appendToDisplay(3)">3</button>
+        <button onclick="appendToDisplay('+')" class="operator">+</button>
+        <button onclick="appendToDisplay(3.14)">&#960;</button> <!--Added pi value-->
+        <button onclick="appendToDisplay(0)">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
         <button onclick="calculateResult()" class="operator">=</button>
         
       </div>
