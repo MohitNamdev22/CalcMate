@@ -71,4 +71,5 @@ button:hover {
 
 .fa-delete-left{
   font-size: 1.3em;
+  color: #fff;  /*changed the color*/
 }
